@@ -22,7 +22,21 @@ app.get('/', (req, res) => {
   res.status(200).send(`${title} is running on port ${app.get('port')}`)
 })
 
+// POSTS
 
+
+app.post('/users', (req, res) => {
+  const { user } = req.body
+  
+})
+
+// PUTS
+
+
+// PATCHES
+
+
+// DELETES
 
 
 module.exports = app;
