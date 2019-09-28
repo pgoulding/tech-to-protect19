@@ -2,8 +2,7 @@
 Tech to protect 2019 team
 #  Project Background  
 ##  Image-based & Object-based Deep Learning for Home Point Clouds for Public Safety
-[Open in Colab](https://colab.research.google.com/github/StephanieRogers-ML/deep-learning_vehicle-dashboard/blob/master/FinalDetection.ipynb) 
-
+[Open in Colab](https://colab.research.google.com/github/pgoulding/tech-to-protect19/blob/master/Room_Object_Detection.ipynb)
 
 ##  Deep Learning Models
 
