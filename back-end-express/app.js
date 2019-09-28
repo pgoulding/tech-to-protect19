@@ -3,8 +3,9 @@ const app = express()
 const cors = require('cors')
 const bodyParser = require('body-parser');
 const environment = process.env.NODE_ENV || 'development'
-const configuration = require('./knexfile')[environment]
-const dbConnect = require('knex')(configuration)
+// const configuration = require('./knexfile')[environment]
+// const dbConnect = require('knex')(configuration)
+// const pythonShell = require('python-shell')
 
 require('dotenv').config()
 app.use(express.json());
@@ -20,3 +21,8 @@ app.get('/', (req, res) => {
   const { title } = app.locals
   res.status(200).send(`${title} is running on port ${app.get('port')}`)
 })
+
+
+
+
+module.exports = app;
