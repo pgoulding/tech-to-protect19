@@ -1,0 +1,49 @@
+.homeownerScreenContainer {
+	background-color: #fff;
+	display: grid;
+	grid-template-rows: 40% 40% 20%;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	height: 100vh;
+	background-image: url('../../App/homeowners.jpg');
+	background-repeat: none;
+  background-position: cover;
+}
+
+.log-out {
+	background-color: #012f42;
+	text-align: center;
+	grid-row: 3;
+	grid-column: 1/4;
+	margin: 0;
+	padding: 2%;
+}
+
+.card-one {
+	grid-row: 2;
+	grid-column: 1;
+}
+
+.card-two {
+	grid-row: 2;
+	grid-column: 2;
+}
+
+.card-three {
+	grid-row: 2;
+	grid-column: 3;
+}
+
+.card-four {
+	grid-row: 3;
+	grid-column: 1;
+}
+
+.card-five {
+	grid-row: 2;
+	grid-column: 2;
+}
+
+.card-six {
+	grid-row: 2;
+	grid-column: 3;
+}

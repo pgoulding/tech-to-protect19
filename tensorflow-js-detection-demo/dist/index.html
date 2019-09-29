@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Tensorflow.js Detection Demo</title>
+  
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<head>
+  <title>Emergency Preparedness</title>
+  <meta charset="UTF-8" />
+  <!-- Load TensorFlow.js. This is required to use MobileNet. -->
+  <script src="https://unpkg.com/@tensorflow/tfjs@0.10.3"></script>
+  <!-- Load the MobileNet model. -->
+  <script src="https://unpkg.com/@tensorflow-models/mobilenet@0.0.1"></script>
+</head>
+
+<body onload="setup()">
+  <div style="text-align:center">
+    <h1>
+      Home Safety Scan
+    </h1>
+    <h2>
+      First, find your smoke detector...
+    </h2>
+    <video id="video">Video stream not available.</video>
+    <pre id="predictions"></pre>
+    <canvas id="canvas" style="display:none"></canvas>
+  </div>
+
+</body>
+
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

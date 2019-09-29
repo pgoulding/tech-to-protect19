@@ -1,0 +1,78 @@
+.homeScreenContainer {
+	background-color: #fff;
+	display: grid;
+	grid-template-rows: 8% 26% 20% 34% 16%;
+	grid-template-columns: 33.3% 33.3% 33.3%;
+	height: 100vh;
+}
+
+.homeScreenHeader {
+	color: #ff8800;
+	background-color: #012f42;
+	font-size: 3em;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	grid-row: 1;
+	grid-column: 1/4;
+	margin: 0;
+	padding: 2%;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	background-color: #012f42;
+	width: 100%;
+	grid-column: 1;
+	grid-row: 2/4;
+	align-items: center;
+}
+
+.googleMapContainer {
+	grid-row: 2/4;
+	grid-column: 2/4;
+	background-image: url('./Screenshot from 2019-09-29 00-33-25.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.preincidentPlanContainer {
+	grid-row: 4;
+	grid-column: 1/4;
+	margin: 2%;
+}
+
+.location {
+	font-size: 1.2em;
+}
+.preincident-plan-grid {
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.neighborhood-container {
+	grid-row: 1/5;
+	grid-column: 1;
+}
+.occupants-container {
+	grid-row: 1/5;
+	grid-column: 2;
+}
+
+.house-details-container {
+	grid-row: 1/5;
+	grid-column: 3;
+}
+
+.style-home-details {
+	color: #ff8800;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 1.2em;
+}
+
+.route-container {
+	grid-row: 5;
+	grid-column: 2/3;
+}
