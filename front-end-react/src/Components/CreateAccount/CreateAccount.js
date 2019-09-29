@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Button from '../Common/Button/Button';
 import Input from '../Common/Input/Input';
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import HomeOwnerMainScreen from '../HomeOwnerMainScreen/HomeOwnerMainScreen';
+import ResponderMainScreen from '../ResponderMainScreen/ResponderMainScreen';
 
 export default class CreateAccount extends Component {
   state = {
@@ -29,8 +32,22 @@ export default class CreateAccount extends Component {
       <main>
        <Input placeholder="Username" name="Username" onChange={this.handleChange} value={this.state.username}/>
        <Input placeholder="Password" name="Password" onChange={this.handleChange} value={this.state.password}/>
-        <Button onPress={this.handleSubmit}>I am a HomeOwner</Button>
-        <Button onPress={this.handleSubmit}>I am a First Responder</Button>
+        <Router>
+        <div>
+          <NavLink to="/HomeOwnerMainScreen">
+            <Button onPress={this.handleSubmit}>
+             I am a HomeOwner
+            </Button>
+            </NavLink>
+            <NavLink to="/ResponderMainScreen">
+            <Button onPress={this.handleSubmit}>
+             I am a First Responder
+            </Button>
+            </NavLink>
+          </div>
+        <Route exact path="/HomeOwnerMainScreen" component={HomeOwnerMainScreen}/>
+         <Route exact path="/ResponderMainScreen" component={ResponderMainScreen}/>
+      </Router>
       </main>
     )
   }
