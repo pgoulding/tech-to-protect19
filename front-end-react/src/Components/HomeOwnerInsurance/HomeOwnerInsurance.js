@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Button from '../Common/Button/Button';
 import './styles.css';
-import ScoreCard from '../Common/ScoreCard/ScoreCard';
 
 export default class HomeOwnerInsurance extends Component {
 	render() {
