@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/tech-to-protect19/static/css/main.19cd293b.chunk.css",
+    "main.js": "/tech-to-protect19/static/js/main.c47d3edc.chunk.js",
+    "main.js.map": "/tech-to-protect19/static/js/main.c47d3edc.chunk.js.map",
+    "runtime-main.js": "/tech-to-protect19/static/js/runtime-main.55d995b2.js",
+    "runtime-main.js.map": "/tech-to-protect19/static/js/runtime-main.55d995b2.js.map",
+    "static/js/2.5e48abdc.chunk.js": "/tech-to-protect19/static/js/2.5e48abdc.chunk.js",
+    "static/js/2.5e48abdc.chunk.js.map": "/tech-to-protect19/static/js/2.5e48abdc.chunk.js.map",
+    "index.html": "/tech-to-protect19/index.html",
+    "precache-manifest.182c5c49a86d7b71a91a95fd581461b3.js": "/tech-to-protect19/precache-manifest.182c5c49a86d7b71a91a95fd581461b3.js",
+    "service-worker.js": "/tech-to-protect19/service-worker.js",
+    "static/css/main.19cd293b.chunk.css.map": "/tech-to-protect19/static/css/main.19cd293b.chunk.css.map",
+    "static/media/styles.css": "/tech-to-protect19/static/media/homeowners.72b156ae.jpg",
+    "static/media/calendar.png": "/tech-to-protect19/static/media/calendar.fbdd10d6.png",
+    "static/media/camera.png": "/tech-to-protect19/static/media/camera.c62f1cbf.png",
+    "static/media/money.png": "/tech-to-protect19/static/media/money.9e308fe7.png",
+    "static/media/App.css": "/tech-to-protect19/static/media/responders.91786edb.jpg",
+    "static/media/triangular-warning-sign.png": "/tech-to-protect19/static/media/triangular-warning-sign.cfca0465.png"
+  }
+}
