@@ -29,8 +29,8 @@ export default class CreateAccount extends Component {
 		return (
 				<main className="mainContainer">
 					<h1 className="header">HomeProtech</h1>
-					<Input placeholder="Username" name="Username" onChange={this.handleChange} value={this.state.username} />
-					<Input placeholder="Password" name="Password" onChange={this.handleChange} value={this.state.password} />
+					<Input placeholder="Username" name="username" onChange={this.handleChange} value={this.state.username} />
+					<Input placeholder="Password" name="password" onChange={this.handleChange} value={this.state.password} />
 					<NavLink to="/HomeOwner">
 						<Button onPress={this.handleSubmit}>I am a HomeOwner</Button>
 					</NavLink>
