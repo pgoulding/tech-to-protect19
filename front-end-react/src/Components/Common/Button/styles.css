@@ -1,0 +1,11 @@
+
+.button {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  width: 300px;
+  height: 100px;
+  background-color: #ff8800;
+  border-radius: 2%;
+  margin: 1%;
+}
