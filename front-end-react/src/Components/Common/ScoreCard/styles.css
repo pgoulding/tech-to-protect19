@@ -5,8 +5,9 @@
   margin: 2%;
   padding: 3%;
   text-align: center;
-  box-shadow: 10px 10px #979797;
+  box-shadow: 5px 10px #979797;
   border-radius: 20%;
+  background-color: #fff;
 }
 
 .score-card-text-info {
