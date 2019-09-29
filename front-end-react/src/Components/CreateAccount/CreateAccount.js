@@ -27,6 +27,7 @@ export default class CreateAccount extends Component {
 
 	render() {
 		return (
+			<main className="background">
 				<main className="mainContainer">
 					<h1 className="header">HomeProtech</h1>
 					<Input placeholder="Username" name="username" onChange={this.handleChange} value={this.state.username} />
@@ -39,6 +40,7 @@ export default class CreateAccount extends Component {
 					</NavLink>
 					<p className="photoCredit">Photo by Scott Webb on Unsplash</p>
 				</main>
+			</main>
 		);
 	}
 }

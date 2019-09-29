@@ -1,5 +1,17 @@
 .score-card-container {
-  
+  width: 80%;
+  height: 20vh;
+  border: 3px solid #38a4c2;
+  margin: 2%;
+  padding: 3%;
+  text-align: center;
+  box-shadow: 10px 10px #979797;
+  border-radius: 20%;
+}
+
+.score-card-text-info {
+  color: #012f42;
+  font-size: 1.5em;
 }
 
 .score-card-image{
@@ -7,5 +19,6 @@
 }
 
 .score-card-text {
-
+  color: #d95104;
+  font-size: 2em;
 }

@@ -19,17 +19,19 @@ export default class LogIn extends Component {
 
 	render() {
 		return (
+			<main className="background">
 			<main className="mainContainer">
 				<h1 className="header">HomeProtech</h1>
 				<Input placeholder="Username" name="username" onChange={this.handleChange} value={this.state.username} />
 				<Input placeholder="Password" name="password" onChange={this.handleChange} value={this.state.password} />
 				<NavLink to="/HomeOwner">
-					<Button onPress={this.handleSubmit}>Log In HomeOwner</Button>
+					<Button onPress={this.handleSubmit}>HomeOwner Log In</Button>
 				</NavLink>
 				<NavLink to="/Responder">
-					<Button onPress={this.handleSubmit}>Log In Responder</Button>
+					<Button onPress={this.handleSubmit}>Responder Log In</Button>
 				</NavLink>
 				<p className="photoCredit">Photo by Scott Webb on Unsplash</p>
+			</main>
 			</main>
 		);
 	}
