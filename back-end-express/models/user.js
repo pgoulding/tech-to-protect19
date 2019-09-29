@@ -55,30 +55,78 @@ const createUser = (user) => {
 
 const signin = (req, res) => {
   // get user creds from request body
+  const userReq = req.body
+  let user;
   // find user based on username in request
-  // check user's password_digest against pw from request
-  // if match, create and save a new token for user
-  // send back json to client with token and user info
+  findUser(userReq)
+    .then(foundUser => {
+      user = foundUser
+      // check user's password_digest against pw from request
+      return checkPassword(userReq.password, foundUser)
+    })
+    // if match, create and save a new token for user
+    .then(() => createToken())
+    .then(token => updateUserToken(token, user))
+    .then(() => {
+      delete user.password_digest
+      // send back json to client with token and user info
+      res.status(200).json(user)
+    })
+    .catch(error => console.log(error))
 }
 
 const findUser = (userReq) => {
-
+  // console.log('user req', userReq)
+  const foundUser =  database('users')
+    .where(userReq.username, 'users.username')
+    .then(data => data.rows[0])
+    return foundUser
 }
 
 const checkPassword = (reqPassword, foundUser) => {
-
+  return new Promise((resolve, reject) => {
+    bcrypt.compare(reqPassword, foundUser.password_digest, (err, response) => {
+      if(err){
+        reject(err)
+        console.log(err)
+      } else if (response) {
+        console.log(response)
+        resolve(response)
+      }
+      else {
+        reject(new Error('Passwords do not match'))
+      } 
+    })
+  })
 }
 
 const updateUserToken = (token, user) => {
-
+  return database('users')
+    .where(userReq.username, 'username')
+    .update({ token, id: user.id })
+    .then(data => data.rows[0])
 }
 
 const authenticate = (userReq) => {
-
+  findByToken(userReq.token)
+    .then(user => {
+      user.username == userReq.username ? true : false;
+    })
 }
 
 const findByToken = (token) => {
+  return database('users')
+    .where({ token })
+    .first()
+}
 
+const userAddress = (req, res) => {
+  const userReq = req.body
+  if(authenticate(userReq)){
+    //handler logic goes here
+  } else  {
+    res.status(404)
+  }
 }
 
 
