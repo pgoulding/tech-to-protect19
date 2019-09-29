@@ -10,6 +10,8 @@ import HomeOwnerScan from '../HomeOwnerScan/HomeOwnerScan';
 import HomeOwnerChecklist from '../HomeOwnerChecklist/HomeOwnerChecklist';
 import HomeOwnerHazards from '../HomeOwnerHazards/HomeOwnerHazards';
 import HomeOwnerInsurance from '../HomeOwnerInsurance/HomeOwnerInsurance';
+import HomeOwnerSafety from '../HomeOwnerSafety/HomeOwnerSafety';
+import HomeOwnerLastScan from '../HomeOwnerLastScan/HomeOwnerLastScan';
 
 export default function Routes() {
 	return (
@@ -24,6 +26,8 @@ export default function Routes() {
 			<Route path="/Checklist" component={HomeOwnerChecklist} />
 			<Route path="/Hazards" component={HomeOwnerHazards} />
 			<Route path="/Insurance" component={HomeOwnerInsurance} />
+			<Route path="/Safety" component={HomeOwnerSafety} />
+			<Route path="/LastScan" component={HomeOwnerLastScan} />
 		</Switch>
 	);
 }

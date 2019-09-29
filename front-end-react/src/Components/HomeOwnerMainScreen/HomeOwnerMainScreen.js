@@ -10,7 +10,7 @@ export default class HomeOwnerMainScreen extends Component {
 			<main>
 				<h2 className="homeScreenHeader">Welcome Back Bill</h2>
 				<section className="homeownerScreenContainer">
-					<NavLink to="/Checklist">
+					<NavLink to="/Safety">
 						<ScoreCard image="" className="card-one">
 							Your Safety Score
 						</ScoreCard>
@@ -20,7 +20,7 @@ export default class HomeOwnerMainScreen extends Component {
 							Money Saved
 						</ScoreCard>
 					</NavLink>
-					<NavLink to="/Scan">
+					<NavLink to="/LastScan">
 						<ScoreCard text="96 Days" className="card-three">
 							Since Last Scan
 						</ScoreCard>
