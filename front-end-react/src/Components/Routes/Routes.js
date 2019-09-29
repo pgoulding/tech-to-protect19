@@ -6,6 +6,10 @@ import App from '../../App/App';
 import HomeOwnerMainScreen from '../HomeOwnerMainScreen/HomeOwnerMainScreen';
 import ResponderMainScreen from '../ResponderMainScreen/ResponderMainScreen';
 import ResponderHomeFloorPlan from '../ResponderHomeFloorPlan/ResponderHomeFloorPlan';
+import HomeOwnerScan from '../HomeOwnerScan/HomeOwnerScan';
+import HomeOwnerChecklist from '../HomeOwnerChecklist/HomeOwnerChecklist';
+import HomeOwnerHazards from '../HomeOwnerHazards/HomeOwnerHazards';
+import HomeOwnerInsurance from '../HomeOwnerInsurance/HomeOwnerInsurance';
 
 export default function Routes() {
 	return (
@@ -16,6 +20,10 @@ export default function Routes() {
 			<Route path="/HomeOwner" component={HomeOwnerMainScreen} />
 			<Route path="/Responder" component={ResponderMainScreen} />
 			<Route path="/FloorPlan" component={ResponderHomeFloorPlan} />
+			<Route path="/Scan" component={HomeOwnerScan} />
+			<Route path="/Checklist" component={HomeOwnerChecklist} />
+			<Route path="/Hazards" component={HomeOwnerHazards} />
+			<Route path="/Insurance" component={HomeOwnerInsurance} />
 		</Switch>
 	);
 }
