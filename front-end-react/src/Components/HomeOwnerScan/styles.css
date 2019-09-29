@@ -1,0 +1,11 @@
+.scan-div {
+  height: 30vh;
+  width: 60%;
+  margin: 2% 20%;
+  background-color: #012f42;
+}
+
+.text-large {
+  font-size: 1.5em;
+  color: #d95104;
+}
