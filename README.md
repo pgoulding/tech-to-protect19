@@ -11,3 +11,12 @@ Tech to protect 2019 team
 * [ ]  Scene Recognition: Identifies the room
 * [ ]  Object detection: Localize and identify multiple household objects in a single image.
 * [ ]  Demo
+
+
+
+@inproceedings{deeplabv3plus2018,
+  title={Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation},
+  author={Liang-Chieh Chen and Yukun Zhu and George Papandreou and Florian Schroff and Hartwig Adam},
+  booktitle={ECCV},
+  year={2018}
+}
