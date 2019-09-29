@@ -2,4 +2,10 @@ li {
   width: 80%;
   color: #ff8800;
   font-size: 1.5em;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  margin: auto;
 }

@@ -76,11 +76,9 @@ const signin = (req, res) => {
 }
 
 const findUser = (userReq) => {
-  // console.log('user req', userReq)
-  const foundUser =  database('users')
-    .where(userReq.username, 'users.username')
+  return database('users')
+    .where('users.username', userReq.username)
     .then(data => data.rows[0])
-    return foundUser
 }
 
 const checkPassword = (reqPassword, foundUser) => {
@@ -102,7 +100,7 @@ const checkPassword = (reqPassword, foundUser) => {
 
 const updateUserToken = (token, user) => {
   return database('users')
-    .where(userReq.username, 'username')
+    .where('users.username', user.username)
     .update({ token, id: user.id })
     .then(data => data.rows[0])
 }
