@@ -20,20 +20,8 @@ function App() {
             <Button>Create Account</Button>
           </NavLink>
           </div>
-        <Route
-          path="/Login"
-          render={() => (
-            <Button
-            >Log In</Button>
-          )}
-        />
-         <Route
-          path="/CreateAccount"
-          render={() => (
-            <Button
-            >Create Account</Button>
-          )}
-        />
+        <Route exact path="/Login" component={LogIn}/>
+         <Route exact path="/CreateAccount" component={CreateAccount}/>
       </Router>
     {/* <p>Photo by Aidan Bartos on Unsplash</p> */}
     <p className="photoCredit">Photo by Scott Webb on Unsplash</p>
