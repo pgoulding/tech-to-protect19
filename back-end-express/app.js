@@ -3,9 +3,10 @@ const app = express()
 const cors = require('cors')
 const bodyParser = require('body-parser');
 const environment = process.env.NODE_ENV || 'development'
-// const configuration = require('./knexfile')[environment]
-// const dbConnect = require('knex')(configuration)
-// const pythonShell = require('python-shell')
+const configuration = require('./knexfile')[environment]
+const dbConnect = require('knex')(configuration)
+const pythonShell = require('python-shell')
+const user = require('./models/user')
 
 require('dotenv').config()
 app.use(express.json());
@@ -24,10 +25,9 @@ app.get('/', (req, res) => {
 
 // POSTS
 
-
 app.post('/users', (req, res) => {
   const { user } = req.body
-  
+
 })
 
 // PUTS

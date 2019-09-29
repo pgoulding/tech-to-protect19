@@ -6,12 +6,51 @@ const crypto = require('crypto')
 
 const signup = (req, res) => {
   // get user from request body
+  const user = req.body
   // encrypt plain text password with bcrypt
+  hashPassword(user.password)
   // set user's password_digest to encrypted pw
-  // create token to be sent back to client to create "session"
-  // set user's token to created token
-  // save user with password_digest and session token to database
-  // respond with 201 and json of created user info
+    .then((hashedPassword) => {
+      delete user.password
+      user.password_digest = hashedPassword
+    })
+    // create token to be sent back to client to create "session"
+    .then(() => createToken())
+    // set user's token to created token
+    .then(token => user.token = token)
+    // save user with password_digest and session token to database
+    .then(createUser(user))
+    .then(user => {
+      delete user.password_digest
+      // respond with 201 and json of created user info
+      res.status(201).json({ user })
+    })
+    // if not respond with 400 status and error
+    .catch(error => console.log(error))
+    // .catch((error) => res.status(400).json({ error }))
+}
+
+const hashPassword = (password) => {
+  return new Promise((resolve, reject) => {
+    bcrypt.hash(password, 10, (err, hash) => {
+      err ? reject(err) : resolve(hash)
+    })
+  })
+}
+
+const createToken = () => {
+  return new Promise((resolve, reject) => {
+    crypto.randomBytes(16, (err, data) => {
+      err ? reject(err) : resolve(data.toString('base64'))
+    })
+  })
+}
+
+const createUser = (user) => {
+  return database('users')
+    .insert(user)
+    .then((data) => data.rows[0])
+    .catch(error => console.log(error))
 }
 
 const signin = (req, res) => {
@@ -39,18 +78,6 @@ const authenticate = (userReq) => {
 }
 
 const findByToken = (token) => {
-
-}
-
-const hashPassword = (password) => {
-
-}
-
-const createToken = () => {
-
-}
-
-const createUser = (user) => {
 
 }
 
