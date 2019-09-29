@@ -2,16 +2,24 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Button from '../Common/Button/Button';
 import Input from '../Common/Input/Input';
+import ResponderHomeFloorPlan from '../ResponderHomeFloorPlan/ResponderHomeFloorPlan';
 
 export class ResponderMainScreen extends Component {
 state = {
   address: '',
+  btnClick: false
 }
 
 handleChange = (e) => {
   const {name, value} = e.target
   this.setState({
     [name]: value
+  })
+}
+
+handlePress = () => {
+  this.setState({
+    btnChange: true
   })
 }
 
@@ -23,7 +31,6 @@ handleChange = (e) => {
           <Button>My Profile</Button>
           <Button>My Team</Button>
           <Input placeholder="Search My Area" name="Address" onChange={this.handleChange} value={this.state.address}/>
-          {/* street, city, state, zip */}
           <Button>Search</Button>
         </nav>
           <section className="googleMapContainer">
@@ -52,8 +59,8 @@ handleChange = (e) => {
             <p>Areas of Concern:</p>
           </article>
           </section>
-          {/* section that renders 3d model of best route in a component - CR*/}
-          <Button>Show Best Route</Button>
+         {btnChange ? <ResponderHomeFloorPlan/> : null}
+          <Button onPress={this.handlePress}>Show Best Route</Button>
           {/* <p>Warning: Clutter level is high. Do XYZ.</p> */}
           <p>Breathe Deep. You Can Do This.</p>
       </main>
