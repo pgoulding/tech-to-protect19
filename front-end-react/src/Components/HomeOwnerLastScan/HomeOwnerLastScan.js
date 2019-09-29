@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Button from '../Common/Button/Button';
 import './styles.css';
 
-export default class HomeOwnerInsurance extends Component {
+export default class HomeOwnerLastScan extends Component {
 	render() {
 		return (
 			<main>
