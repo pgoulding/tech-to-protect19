@@ -1,12 +1,12 @@
 .score-card-container {
   width: 80%;
-  height: 20vh;
   border: 3px solid #38a4c2;
-  margin: 2%;
+  margin: 10px auto;
   padding: 3%;
+  height: fit-content;
   text-align: center;
   box-shadow: 5px 10px #979797;
-  border-radius: 20%;
+  border-radius: 12px;
   background-color: #fff;
 }
 
@@ -16,7 +16,8 @@
 }
 
 .score-card-image{
-
+  object-fit: contain;
+  height: 100px;
 }
 
 .score-card-text {
