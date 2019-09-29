@@ -19,7 +19,7 @@ handleChange = (e) => {
 
 handlePress = () => {
   this.setState({
-    btnChange: true
+    btnClick: true
   })
 }
 
@@ -59,7 +59,7 @@ handlePress = () => {
             <p>Areas of Concern:</p>
           </article>
           </section>
-         {btnChange ? <ResponderHomeFloorPlan/> : null}
+         {this.btnClick ? <ResponderHomeFloorPlan/> : null}
           <Button onPress={this.handlePress}>Show Best Route</Button>
           {/* <p>Warning: Clutter level is high. Do XYZ.</p> */}
           <p>Breathe Deep. You Can Do This.</p>
